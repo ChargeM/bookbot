@@ -1,4 +1,4 @@
-from stats import count_words
+import stats
 
 def get_book_text(filepath):
     with open(filepath) as f:
@@ -8,6 +8,8 @@ def get_book_text(filepath):
 def main():
     filepath = "/home/chargedmite/workspace/github/bookbot/books/frankenstein.txt"
     book_content = get_book_text(filepath)
-    count_words(book_content)
+    #stats.count_words(book_content)
+    stats.count_characters(book_content)
+
 
 main()
