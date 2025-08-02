@@ -20,10 +20,11 @@ def count_characters(book_txt):
         else:
             char_num_dict[item] = 1
     
-    print (char_num_dict)
+    return char_num_dict
 
-        
-
-    
-
-    
+def sorted_list(char_dict):
+    sorted_char = {k: v for k, v in sorted(char_dict.items(), key = lambda item: item[1])}
+    reversed_sorted_char = dict(reversed(sorted_char.items()))
+    sorted_char_list = []
+    for item in reversed_sorted_char:
+        sorted_char_list.append({item : reversed_sorted_char[item]})
